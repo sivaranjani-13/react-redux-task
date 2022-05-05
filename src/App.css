@@ -1,0 +1,56 @@
+*
+{
+  
+	margin:0px;
+	box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.header{
+  
+	height:150px;
+  width: 100%;
+	background-color: rgb(184, 216, 208);
+	text-align:center;	
+  border: 1px solid black;
+}
+
+.left{
+  height: 350px;
+  width: 20%;
+  float:left;
+  text-align:center;
+	background-color:#a8b1d8;
+  border: 1px solid black;
+}
+.left ul{
+  list-style: none;
+  text-align:justify;
+  padding:20px;
+}
+.left li{
+    padding: 20px;
+    cursor:pointer;
+    text-align: center;
+}
+
+.right{
+  height: 350px;
+  width: 80%;
+  float:right;
+  text-align:center;
+  justify-content: center;
+	background-color:#d19a9e;
+  border: 1px solid black;
+}
+
+.footer{
+  height:200px;
+  text-align:center;
+  background-color: rgb(177, 177, 61);
+  border: 1px solid black;
+  clear: both;
+}
