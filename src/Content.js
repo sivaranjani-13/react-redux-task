@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {useDispatch} from 'react-redux';
 import {useState} from 'react';
-import {update} from "./userSlice";
+import {update} from "./app/userSlice";
 
 function Content() {
   const [name,setName] = useState("");
