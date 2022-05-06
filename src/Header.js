@@ -1,10 +1,12 @@
-import React from 'react';
 import './App.css';
+import {useSelector} from "react-redux";
 
 function Header() {
-  return (
+  
+    const name=useSelector((state)=>state.temp.name);
+    return (
     <div className="header">
-      <h1>Header</h1>
+      <span>{name}</span>
     </div>
   );
 }

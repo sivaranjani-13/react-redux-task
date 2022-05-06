@@ -1,27 +1,27 @@
 import React from 'react';
 import './App.css';
-import {useDispatch, useSelector} from 'react-redux';
-import {useState} from 'react'
+import {useDispatch} from 'react-redux';
+import {useState} from 'react';
+import {update} from "./userSlice";
+
 function Content() {
-  const [name,setName] = useState("")
-  const temp=useSelector((state)=> state.temp.name);
+  const [name,setName] = useState("");
   const dispatch=useDispatch();
 
-  const handleSubmit = (event) => {
+  const handleUpdate = (event) => {
     event.preventDefault();
-    dispatch(update({name}))
+    dispatch(update({name}));
   };
   return (
     <div className="right">
       <h3>Hello!!! Enter Your Name</h3>
       <br></br>
-      <form onSubmit={handleSubmit}>
+     
      <label>
-        <input type="text" name="username" placeholder="please enter your name" onChange={(e)=>setName(e.target.value)} required
-      />
-      </label><br></br>
-      <input type="submit"/>
-      </form>
+        <input type="text"  placeholder="please enter your name" onChange={(event)=>setName(event.target.value)}/>
+      </label><br/>
+      <button onClick={handleUpdate}> Enter</button>
+
     </div>
   );
 }

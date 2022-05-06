@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import {useSelector} from "react-redux";
 
 function Footer() {
+  const name=useSelector((state)=>state.temp.name);
   return (
     <div className="footer">
-      <h1>Footer</h1>
+      <span>{name}</span>
     </div>
   );
 }
